@@ -1,0 +1,12 @@
+[Unit]
+Description=USDT/USDC wallet tracker Telegram bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=/home/razr/projects/wallet-tracker
+ExecStart=/home/razr/projects/wallet-tracker/.venv/bin/python tracker.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
